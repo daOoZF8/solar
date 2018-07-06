@@ -34,7 +34,7 @@ function getChartDate(d) {
     return Date.UTC(d.substring(0,4), d.substring(5,7)-1, d.substring(8,10), d.substring(11,13), d.substring(14,16), d.substring(17,19)) - (myOffset * 60000);
 }
 
-      // Hide all series, via 'Hide All' button.  Then user can click on serries name in legent to show series of interest.      
+// Hide all series, via 'Hide All' button.  Then user can click on serries name in legent to show series of interest.      
 function HideAll(){
   for (var index=0; index<dynamicChart.series.length; index++)  // iterate through each series
   { 
@@ -428,6 +428,12 @@ function loadChannelHistory(sentChannelIndex,channelNumber,key,sentFieldList,sen
      window.console && console.log('channel index:',channelIndex);
      numLoads++;
      if (numLoads<maxLoads) {loadChannelHistory(channelIndex,channelNumber,key,fieldList,numLoads,maxLoads);}
+
+
+  dynamicChart.series[0].hide();
+  dynamicChart.series[1].hide();
+
+
 	 });
 }
 

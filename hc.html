@@ -429,6 +429,10 @@ function loadChannelHistory(sentChannelIndex,channelNumber,key,sentFieldList,sen
      window.console && console.log('channel index:',channelIndex);
      numLoads++;
      if (numLoads<maxLoads) {loadChannelHistory(channelIndex,channelNumber,key,fieldList,numLoads,maxLoads);}
+
+  dynamicChart.series[0].hide();
+  dynamicChart.series[1].hide();
+  
 	 });
 }
 
